@@ -8,7 +8,7 @@ Original file is located at
 """
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col 
 
 # Spark session
 spark = SparkSession.builder \
