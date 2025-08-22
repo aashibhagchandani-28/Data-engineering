@@ -21,7 +21,7 @@ output_data = [(1, 100), (2, 200)]
 
 df_input = spark.createDataFrame(input_data, ["id", "amount"])
 df_output = spark.createDataFrame(output_data, ["id", "amount"])
-
+ 
 # Reconcile
 reconciled = df_input.join(df_output, on="id").withColumn("matched", df_input["amount"] * 10 == df_output["amount"])
 reconciled.show()
@@ -122,5 +122,5 @@ invalid_name_output = df_output.filter((col("name").isNull()) | (col("name") == 
 if invalid_name_input == 0 and invalid_name_output == 0:
     print("PASS: Business rule check passed")
 else:
-    print("FAIL: Business rule violation - Name is missing or invalid")
+    print("FAIL: Business rule violation - Name is missing or invalid")  
 
