@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/13Hx_1dhBLrQruAVgrh2z4uJjypQJxEQV
 """
 
-print("Hello"
+print("Hello")
 
 x = 5 / 0
 
